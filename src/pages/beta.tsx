@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { InferGetServerSidePropsType, NextPage } from "next";
 import React from "react";
 import Button from "../components/Button";
 
@@ -8,7 +8,7 @@ const Beta: NextPage = () => {
       `/api/${type === "edge" ? "experimental-edge" : "nodejs"}`
     );
 
-    const resJson = await res.json()
+    const resJson = await res.json();
 
     console.log("res", resJson);
   };
